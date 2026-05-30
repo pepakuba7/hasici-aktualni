@@ -1,0 +1,16 @@
+{
+  "name": "Hasiči Hodslavice",
+  "short_name": "Hasiči Hodslavice",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#101116",
+  "theme_color": "#d00016",
+  "icons": [
+    {
+      "src": "assets/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

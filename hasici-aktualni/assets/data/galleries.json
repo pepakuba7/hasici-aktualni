@@ -1,0 +1,124 @@
+{
+  "ples": {
+    "title": "Hasičský ples 2026",
+    "description": "Společenský večer a atmosféra hasičského plesu v Hodslavicích.",
+    "photos": [
+      {
+        "src": "assets/gallery/ples/ples-2026-01.webp",
+        "alt": "Hasičský ples 2026 – fotografie 1"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-02.webp",
+        "alt": "Hasičský ples 2026 – fotografie 2"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-03.webp",
+        "alt": "Hasičský ples 2026 – fotografie 3"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-04.webp",
+        "alt": "Hasičský ples 2026 – fotografie 4"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-05.webp",
+        "alt": "Hasičský ples 2026 – fotografie 5"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-06.webp",
+        "alt": "Hasičský ples 2026 – fotografie 6"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-07.webp",
+        "alt": "Hasičský ples 2026 – fotografie 7"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-08.webp",
+        "alt": "Hasičský ples 2026 – fotografie 8"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-09.webp",
+        "alt": "Hasičský ples 2026 – fotografie 9"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-10.webp",
+        "alt": "Hasičský ples 2026 – fotografie 10"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-11.webp",
+        "alt": "Hasičský ples 2026 – fotografie 11"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-12.webp",
+        "alt": "Hasičský ples 2026 – fotografie 12"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-13.webp",
+        "alt": "Hasičský ples 2026 – fotografie 13"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-14.webp",
+        "alt": "Hasičský ples 2026 – fotografie 14"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-15.webp",
+        "alt": "Hasičský ples 2026 – fotografie 15"
+      },
+      {
+        "src": "assets/gallery/ples/ples-2026-16.webp",
+        "alt": "Hasičský ples 2026 – fotografie 16"
+      }
+    ]
+  },
+  "darovani-krve": {
+    "title": "Darování krve",
+    "description": "Dobrovolná pomoc členů sboru, která má skutečný dopad.",
+    "photos": [
+      {
+        "src": "assets/gallery/darovani-krve/darovani-krve-01.webp",
+        "alt": "Darování krve – fotografie 1"
+      },
+      {
+        "src": "assets/gallery/darovani-krve/darovani-krve-02.webp",
+        "alt": "Darování krve – fotografie 2"
+      },
+      {
+        "src": "assets/gallery/darovani-krve/darovani-krve-03.webp",
+        "alt": "Darování krve – fotografie 3"
+      },
+      {
+        "src": "assets/gallery/darovani-krve/darovani-krve-04.webp",
+        "alt": "Darování krve – fotografie 4"
+      },
+      {
+        "src": "assets/gallery/darovani-krve/darovani-krve-05.webp",
+        "alt": "Darování krve – fotografie 5"
+      },
+      {
+        "src": "assets/gallery/darovani-krve/darovani-krve-06.webp",
+        "alt": "Darování krve – fotografie 6"
+      }
+    ]
+  },
+  "silvestrovsky-beh-2025": {
+    "title": "Silvestrovský běh 2025",
+    "description": "Fotografie ze silvestrovského běhu a závěru roku 2025.",
+    "photos": [
+      {
+        "src": "assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-01.webp",
+        "alt": "Silvestrovský běh 2025 – fotografie 1"
+      },
+      {
+        "src": "assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-02.webp",
+        "alt": "Silvestrovský běh 2025 – fotografie 2"
+      },
+      {
+        "src": "assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-03.webp",
+        "alt": "Silvestrovský běh 2025 – fotografie 3"
+      },
+      {
+        "src": "assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-04.webp",
+        "alt": "Silvestrovský běh 2025 – fotografie 4"
+      }
+    ]
+  }
+}
