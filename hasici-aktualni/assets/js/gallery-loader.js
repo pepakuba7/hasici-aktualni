@@ -1,9 +1,35 @@
 (() => {
   const root = document.querySelector('[data-gallery-root]');
   if (!root) return;
+  let galleries = {};
+
+  const openAlbum = (slug) => {
+    const panel = document.querySelector(`[data-album-panel="${slug}"]`);
+    if (!panel) return;
+    document.querySelectorAll('[data-album-panel]').forEach((item) => { item.hidden = item !== panel; });
+    const title = root.querySelector('[data-album-title]');
+    if (title) title.textContent = galleries[slug]?.title || 'Fotografie';
+    root.hidden = false;
+    root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  document.querySelectorAll('[data-album-open]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      openAlbum(link.dataset.albumOpen);
+    });
+  });
+
+  root.querySelector('[data-album-close]')?.addEventListener('click', () => {
+    root.hidden = true;
+    document.querySelectorAll('[data-album-panel]').forEach((item) => { item.hidden = true; });
+    document.querySelector('.gallery-grid')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
   fetch('assets/data/galleries.json')
     .then((response) => response.json())
     .then((data) => {
+      galleries = data;
       Object.entries(data).forEach(([slug, gallery]) => {
         const mount = document.querySelector(`[data-gallery-list="${slug}"]`);
         if (!mount) return;

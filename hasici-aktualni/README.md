@@ -1,6 +1,8 @@
-# Hasiči Hodslavice — moderní statický web
+# Hasiči Hodslavice — informační web
 
-Hotová statická verze webu pro otevření ve Visual Studio Code a nasazení na GitHub/Vercel.
+Statická verze webu SDH a JSDH Hodslavice pro otevření ve Visual Studio Code a nasazení na GitHub/Vercel.
+
+Web je zaměřený na stálé informace o sboru, jednotce, technice, mládeži a kontaktech. Pravidelně upravovanou částí může být kalendář v souboru `akce.html`.
 
 ## Jak otevřít lokálně
 
@@ -22,6 +24,7 @@ mladez.html
 akce.html
 fotogalerie.html
 kontakty.html
+ochrana-osobnich-udaju.html
 assets/
 ```
 

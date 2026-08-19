@@ -8,12 +8,14 @@
     toggle.addEventListener('click', () => {
       const isOpen = body.classList.toggle('menu-open');
       toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Zavřít menu' : 'Otevřít menu');
     });
 
     nav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         body.classList.remove('menu-open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Otevřít menu');
       });
     });
   }
@@ -36,46 +38,6 @@
 
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
-
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add('is-visible'));
-  }
-
-  // Animated counters
-  const counters = document.querySelectorAll('[data-count]');
-  if ('IntersectionObserver' in window && counters.length) {
-    const counterIo = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        const end = Number(el.dataset.count || 0);
-        const suffix = el.dataset.suffix || '';
-        const duration = 1100;
-        const start = performance.now();
-        const step = (now) => {
-          const progress = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          el.textContent = Math.round(end * eased).toLocaleString('cs-CZ') + suffix;
-          if (progress < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-        counterIo.unobserve(el);
-      });
-    }, { threshold: 0.25 });
-    counters.forEach((el) => counterIo.observe(el));
-  }
 
   // Tabs / filters
   document.querySelectorAll('[data-tabs]').forEach((tabs) => {
@@ -116,6 +78,23 @@
       } catch (e) {
         alert(value);
       }
+    });
+  });
+
+  // External map is loaded only after the visitor chooses to open it.
+  document.querySelectorAll('[data-load-map]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const container = btn.closest('[data-map]');
+      const src = btn.dataset.mapSrc;
+      if (!container || !src) return;
+      const iframe = document.createElement('iframe');
+      iframe.title = 'Mapa hasičské zbrojnice Hodslavice';
+      iframe.loading = 'lazy';
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = 'no-referrer-when-downgrade';
+      iframe.src = src;
+      container.replaceChildren(iframe);
+      container.classList.add('is-loaded');
     });
   });
 

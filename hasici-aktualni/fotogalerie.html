@@ -27,10 +27,9 @@
     <header class="site-header" data-header>
       <div class="container nav" aria-label="Hlavní navigace">
         <a class="logo" href="index.html" aria-label="Hasiči Hodslavice domů">
-          <img src="assets/img/logo.svg" alt="" width="46" height="46">
           <span>Hasiči Hodslavice<small>SDH & JSDH</small></span>
         </a>
-        <nav class="nav__links" data-nav><a href="index.html">Domů</a><a href="o-nas.html">O nás</a><a href="jednotka.html">Jednotka</a><a href="technika.html">Technika</a><a href="vyjezdy.html">Výjezdy</a><a href="mladez.html">Mládež</a><a href="akce.html">Akce</a><a href="fotogalerie.html">Galerie</a><a href="kontakty.html">Kontakty</a></nav>
+        <nav class="nav__links" data-nav><a href="index.html">Domů</a><a href="o-nas.html">O nás</a><a href="jednotka.html">Jednotka</a><a href="technika.html">Technika</a><a href="mladez.html">Mládež</a><a href="akce.html">Akce</a><a href="fotogalerie.html">Galerie</a><a href="kontakty.html">Kontakty</a><a class="nav__join" href="jednotka.html#nabor">Přidej se</a></nav>
         <a class="btn btn--primary btn--small nav__cta" href="jednotka.html#nabor">Přidej se</a>
         <button class="menu-toggle" type="button" aria-label="Otevřít menu" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button>
       </div>
@@ -38,24 +37,41 @@
     
 <main id="main">
 
-<section class="hero hero--sub"><div class="hero__media"><img src="assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-01.webp" alt="Silvestrovský běh 2025"></div><div class="container hero__content"><div class="hero__badges"><span class="badge badge--red">Fotogalerie</span><span class="badge">Aktuální alba</span></div><h1>Fotogalerie</h1><p>Alba z akcí a života sboru.</p></div></section>
-<section class="section"><div class="container"><div class="section__head reveal"><div><span class="eyebrow">Alba</span><h2>Aktuální alba</h2></div><p class="lead">Fotky jsou rozdělené podle akcí. Po otevření lze listovat šipkami.</p></div><div class="gallery-grid"><a id="ples" class="gallery-folder reveal" href="#ples-list"><img src="assets/gallery/ples/ples-2026-01.webp" alt="Hasičský ples 2026"><div class="gallery-folder__body"><span class="badge badge--red">Album</span><h3>Hasičský ples 2026</h3><p>Společenský večer a atmosféra hasičského plesu.</p></div></a><a id="darovani-krve" class="gallery-folder reveal" href="#darovani-krve-list"><img src="assets/gallery/darovani-krve/darovani-krve-01.webp" alt="Darování krve"><div class="gallery-folder__body"><span class="badge badge--red">Album</span><h3>Darování krve</h3><p>Dobrovolná pomoc, která má skutečný dopad.</p></div></a><a id="silvestrovsky-beh-2025" class="gallery-folder reveal" href="#silvestrovsky-beh-2025-list"><img src="assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-01.webp" alt="Silvestrovský běh 2025"><div class="gallery-folder__body"><span class="badge badge--red">Album</span><h3>Silvestrovský běh 2025</h3><p>Fotografie ze silvestrovského běhu a závěru roku.</p></div></a></div></div></section>
-<section class="section section--soft" data-gallery-root><div class="container"><div class="section__head reveal"><div><span class="eyebrow">Fotky</span><h2>Fotky v albech</h2></div></div><h3 id="ples-list">Hasičský ples 2026</h3><div data-gallery-list="ples" class="mt-2"></div><div class="hr"></div><h3 id="darovani-krve-list">Darování krve</h3><div data-gallery-list="darovani-krve" class="mt-2"></div><div class="hr"></div><h3 id="silvestrovsky-beh-2025-list">Silvestrovský běh 2025</h3><div data-gallery-list="silvestrovsky-beh-2025" class="mt-2"></div></div></section>
+<section class="hero hero--sub"><div class="hero__media"><img src="assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-01.webp" alt="Silvestrovský běh 2025"></div><div class="container hero__content"><div class="hero__badges"><span class="badge badge--red">Fotogalerie</span></div><h1>Fotogalerie</h1><p>Alba z akcí a života sboru.</p></div></section>
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal"><div><span class="eyebrow">Alba</span><h2>Vyberte album</h2></div><p class="lead">Po otevření alba lze mezi fotografiemi listovat šipkami.</p></div>
+    <div class="gallery-grid gallery-grid--albums">
+      <a id="technika" class="gallery-folder reveal" href="#otevrene-album" data-album-open="technika"><img src="assets/img/technika/cas20-hero.webp" alt="Technika Hasičů Hodslavice" loading="lazy"><div class="gallery-folder__body"><span class="badge badge--red">10 fotografií</span><h3>Technika sboru</h3></div></a>
+      <a id="ples" class="gallery-folder reveal" href="#otevrene-album" data-album-open="ples"><img src="assets/gallery/ples/ples-2026-01.webp" alt="Hasičský ples 2026" loading="lazy"><div class="gallery-folder__body"><span class="badge badge--red">16 fotografií</span><h3>Hasičský ples 2026</h3></div></a>
+      <a id="darovani-krve" class="gallery-folder reveal" href="#otevrene-album" data-album-open="darovani-krve"><img src="assets/gallery/darovani-krve/darovani-krve-01.webp" alt="Darování krve" loading="lazy"><div class="gallery-folder__body"><span class="badge badge--red">6 fotografií</span><h3>Darování krve</h3></div></a>
+      <a id="silvestrovsky-beh-2025" class="gallery-folder reveal" href="#otevrene-album" data-album-open="silvestrovsky-beh-2025"><img src="assets/gallery/silvestrovsky-beh-2025/silvestrovsky-beh-2025-01.webp" alt="Silvestrovský běh 2025" loading="lazy"><div class="gallery-folder__body"><span class="badge badge--red">4 fotografie</span><h3>Silvestrovský běh 2025</h3></div></a>
+    </div>
+  </div>
+</section>
+<section id="otevrene-album" class="section section--soft" data-gallery-root hidden>
+  <div class="container">
+    <div class="section__head"><div><span class="eyebrow">Otevřené album</span><h2 data-album-title>Fotografie</h2></div><button class="btn btn--outline btn--small" type="button" data-album-close>Zavřít album</button></div>
+    <div data-album-panel="technika" hidden><div data-gallery-list="technika"></div></div>
+    <div data-album-panel="ples" hidden><div data-gallery-list="ples"></div></div>
+    <div data-album-panel="darovani-krve" hidden><div data-gallery-list="darovani-krve"></div></div>
+    <div data-album-panel="silvestrovsky-beh-2025" hidden><div data-gallery-list="silvestrovsky-beh-2025"></div></div>
+  </div>
+</section>
 
 </main>
 
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
+        <div class="footer-grid footer-grid--compact">
           <div>
             <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="" width="46" height="46"><span>Hasiči Hodslavice<small>Pomáháme dobrovolně</small></span></a>
-            <p class="mt-3">Moderní informační web pro sbor a jednotku dobrovolných hasičů v Hodslavicích. Slouží pro obyvatele, členy, mladé hasiče, partnery i zájemce o členství.</p>
+            <p class="mt-3">Dobrovolní hasiči pro Hodslavice a okolí.</p>
           </div>
-          <div><h4>Web</h4><div class="footer-links"><a href="index.html" data-footer-link>Domů</a><a href="o-nas.html" data-footer-link>O nás</a><a href="jednotka.html" data-footer-link>Jednotka</a><a href="technika.html" data-footer-link>Technika</a><a href="vyjezdy.html" data-footer-link>Výjezdy</a><a href="mladez.html" data-footer-link>Mládež</a><a href="akce.html" data-footer-link>Akce</a><a href="fotogalerie.html" data-footer-link>Galerie</a><a href="kontakty.html" data-footer-link>Kontakty</a></div></div>
-          <div><h4>Užitečné</h4><div class="footer-links"><a href="bezpecnost.html">Rady pro občany</a><a href="aktuality.html">Aktuality</a><a href="dotace.html">Dotace</a><a href="akce.html">Kalendář akcí</a></div></div>
-          <div><h4>Kontakt</h4><p>Hodslavice 102<br>742 71 Hodslavice</p><div class="inline-actions"><a class="btn btn--primary btn--small" href="tel:+420773756825">Velitel jednotky</a><a class="btn btn--ghost btn--small" href="mailto:hasici-hodslavice@seznam.cz">E-mail</a></div></div>
+          <div><h4>Menu</h4><div class="footer-links footer-links--compact"><a href="index.html" data-footer-link>Domů</a><a href="o-nas.html" data-footer-link>O nás</a><a href="jednotka.html" data-footer-link>Jednotka</a><a href="technika.html" data-footer-link>Technika</a><a href="mladez.html" data-footer-link>Mládež</a><a href="akce.html" data-footer-link>Akce</a><a href="fotogalerie.html" data-footer-link>Galerie</a><a href="kontakty.html" data-footer-link>Kontakty</a></div></div>
+          <div><h4>Kontakt</h4><p>Hodslavice 102<br>742 71 Hodslavice</p><div class="inline-actions"><a class="btn btn--primary btn--small" href="tel:+420773756825">Zavolat veliteli</a><a class="btn btn--ghost btn--small" href="mailto:hasici-hodslavice@seznam.cz">E-mail</a></div></div>
         </div>
-        <div class="footer-bottom"><span>© <span data-year></span> Hasiči Hodslavice</span><span>Statický web bez vlastního sledování.</span></div>
+        <div class="footer-bottom"><span>© <span data-year></span> Hasiči Hodslavice</span><span class="footer-emergency">V ohrožení volejte <a href="tel:150">150</a> nebo <a href="tel:112">112</a></span><span><a class="footer-privacy" href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> · Bez vlastního sledování.</span></div>
       </div>
     </footer>
     <div class="lightbox" data-lightbox aria-modal="true" aria-hidden="true" role="dialog" aria-label="Zvětšená fotografie">

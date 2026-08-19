@@ -1,4 +1,60 @@
 {
+  "technika": {
+    "title": "Technika sboru",
+    "description": "Detailní pohled na vozidla Hasičů Hodslavice.",
+    "photos": [
+      {
+        "src": "assets/img/technika/cas20-front.webp",
+        "alt": "CAS 20 Tatra T815 Terrno1 před zbrojnicí",
+        "caption": "CAS 20 – Tatra T815"
+      },
+      {
+        "src": "assets/img/technika/cas20-side.webp",
+        "alt": "Boční pohled na CAS 20 Tatra T815 Terrno1",
+        "caption": "CAS 20 – boční pohled"
+      },
+      {
+        "src": "assets/img/technika/cas20-detail.webp",
+        "alt": "Detailní pohled na cisternu CAS 20",
+        "caption": "CAS 20 – detail"
+      },
+      {
+        "src": "assets/img/technika/cas20-hero.webp",
+        "alt": "CAS 20 před hasičskou zbrojnicí Hodslavice",
+        "caption": "CAS 20 a zbrojnice"
+      },
+      {
+        "src": "assets/img/technika/vw-transporter-front.webp",
+        "alt": "Volkswagen Transporter DA-L2Z před zbrojnicí",
+        "caption": "Volkswagen Transporter"
+      },
+      {
+        "src": "assets/img/technika/vw-transporter-side.webp",
+        "alt": "Boční pohled na Volkswagen Transporter DA-L2Z",
+        "caption": "Transporter – boční pohled"
+      },
+      {
+        "src": "assets/img/technika/fiat-ducato-front.webp",
+        "alt": "Fiat Ducato před zbrojnicí Hodslavice",
+        "caption": "Fiat Ducato"
+      },
+      {
+        "src": "assets/img/technika/fiat-ducato-side.webp",
+        "alt": "Boční pohled na Fiat Ducato",
+        "caption": "Fiat Ducato – boční pohled"
+      },
+      {
+        "src": "assets/img/technika/skoda-roomster-front.webp",
+        "alt": "Škoda Roomster před zbrojnicí Hodslavice",
+        "caption": "Škoda Roomster"
+      },
+      {
+        "src": "assets/img/technika/skoda-roomster-side.webp",
+        "alt": "Boční pohled na Škoda Roomster",
+        "caption": "Roomster – boční pohled"
+      }
+    ]
+  },
   "ples": {
     "title": "Hasičský ples 2026",
     "description": "Společenský večer a atmosféra hasičského plesu v Hodslavicích.",
