@@ -103,7 +103,10 @@
     const fallback = href;
     window.location.href = fallback;
     if (statusEl) {
-      statusEl.innerHTML = `Pokud se e-mailový program neotevře, napište přímo na <a href="${fallback}">hasici-hodslavice@seznam.cz</a>.`;
+      const link = document.createElement('a');
+      link.href = fallback;
+      link.textContent = 'hasici-hodslavice@seznam.cz';
+      statusEl.replaceChildren('Pokud se e-mailový program neotevře, napište přímo na ', link, '.');
     }
   };
 

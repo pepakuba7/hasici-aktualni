@@ -4,7 +4,7 @@
   let galleries = {};
 
   const openAlbum = (slug) => {
-    const panel = document.querySelector(`[data-album-panel="${slug}"]`);
+    const panel = document.querySelector(`[data-album-panel="${CSS.escape(slug)}"]`);
     if (!panel) return;
     document.querySelectorAll('[data-album-panel]').forEach((item) => { item.hidden = item !== panel; });
     const title = root.querySelector('[data-album-title]');
@@ -31,23 +31,54 @@
     .then((data) => {
       galleries = data;
       Object.entries(data).forEach(([slug, gallery]) => {
-        const mount = document.querySelector(`[data-gallery-list="${slug}"]`);
+        const mount = document.querySelector(`[data-gallery-list="${CSS.escape(slug)}"]`);
         if (!mount) return;
         const photos = Array.isArray(gallery.photos) ? gallery.photos : [];
         if (!photos.length) {
-          mount.innerHTML = `<div class="empty-gallery"><strong>${gallery.title}</strong><p>${gallery.description || 'Fotografie budou doplněny.'}</p><small>Fotky přidej do složky <code>assets/gallery/${slug}</code> a zapiš je do <code>assets/data/galleries.json</code>.</small></div>`;
+          const empty = document.createElement('div');
+          empty.className = 'empty-gallery';
+          const title = document.createElement('strong');
+          title.textContent = gallery.title;
+          const description = document.createElement('p');
+          description.textContent = gallery.description || 'Fotografie budou doplněny.';
+          const note = document.createElement('small');
+          const folder = document.createElement('code');
+          folder.textContent = `assets/gallery/${slug}`;
+          const manifest = document.createElement('code');
+          manifest.textContent = 'assets/data/galleries.json';
+          note.append('Fotky přidej do složky ', folder, ' a zapiš je do ', manifest, '.');
+          empty.append(title, description, note);
+          mount.replaceChildren(empty);
           return;
         }
         mount.classList.add('grid', 'grid--3');
-        mount.innerHTML = photos.map((photo) => `
-          <button class="gallery-photo" type="button" data-lightbox-src="${photo.src}" data-lightbox-alt="${photo.alt || gallery.title}" data-lightbox-group="${slug}">
-            <img src="${photo.src}" alt="${photo.alt || gallery.title}" loading="lazy">
-            <span>${photo.caption || gallery.title}</span>
-          </button>
-        `).join('');
+        const items = photos.map((photo) => {
+          const button = document.createElement('button');
+          button.className = 'gallery-photo';
+          button.type = 'button';
+          button.dataset.lightboxSrc = photo.src;
+          button.dataset.lightboxAlt = photo.alt || gallery.title;
+          button.dataset.lightboxGroup = slug;
+          const image = document.createElement('img');
+          image.src = photo.src;
+          image.alt = photo.alt || gallery.title;
+          image.loading = 'lazy';
+          const caption = document.createElement('span');
+          caption.textContent = photo.caption || gallery.title;
+          button.append(image, caption);
+          return button;
+        });
+        mount.replaceChildren(...items);
       });
     })
     .catch(() => {
-      root.insertAdjacentHTML('beforeend', '<div class="empty-gallery"><strong>Galerii se nepodařilo načíst.</strong><p>Zkontroluj soubor assets/data/galleries.json.</p></div>');
+      const empty = document.createElement('div');
+      empty.className = 'empty-gallery';
+      const title = document.createElement('strong');
+      title.textContent = 'Galerii se nepodařilo načíst.';
+      const description = document.createElement('p');
+      description.textContent = 'Zkontroluj soubor assets/data/galleries.json.';
+      empty.append(title, description);
+      root.append(empty);
     });
 })();

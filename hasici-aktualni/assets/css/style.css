@@ -604,3 +604,39 @@ main:before{
   .footer-bottom>span:first-child{display:block;margin:0}
   .footer-bottom>span:last-child{text-align:left}
 }
+
+/* Finální kontrola kontaktů a menších displejů */
+.contact-mail{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  margin:22px 0 16px;
+  padding:16px 18px;
+  border:1px solid var(--line);
+  border-left:3px solid var(--red);
+  border-radius:10px;
+  background:rgba(255,255,255,.92);
+}
+.contact-mail>div:first-child,.contact-card>div:last-child{min-width:0}
+.contact-mail .eyebrow{margin-bottom:4px}
+.contact-mail a:not(.btn){font-size:clamp(1.05rem,2vw,1.5rem);line-height:1.25;overflow-wrap:anywhere}
+.contact-mail .inline-actions{justify-content:flex-end}
+.contacts-grid>*{min-width:0}
+.error-page{min-height:100svh;display:grid;place-items:center}
+
+@media (max-width:1040px){
+  .contacts-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:860px){
+  .contact-mail{grid-template-columns:1fr;align-items:start}
+  .contact-mail .inline-actions{justify-content:flex-start}
+}
+
+@media (max-width:700px){
+  .contact-mail{margin:18px 0 12px;padding:14px}
+  .contact-mail .inline-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}
+  .contact-mail .btn{width:100%;min-width:0}
+  .contact-card small a{overflow-wrap:anywhere;word-break:break-word}
+}
